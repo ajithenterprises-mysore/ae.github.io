@@ -206,7 +206,7 @@ footer {
     <div class="hero-content">
         <h1>Precision Tools & Industrial Solutions</h1>
         <p>Delivering high-quality moulds, tools & parts with innovation and excellence</p>
-        <button class="btn">Get Started</button>
+        <button class="btn" onclick="startAction()">Get in Touch</button>
     </div>
 </section>
 
@@ -236,7 +236,7 @@ footer {
 </section>
 
 <!-- CONTACT -->
-<section class="section">
+<section class="section" id="contact">
     <form action="https://formsubmit.co/kiniaryan11@gmail.com" method="POST">
     
     <input type="text" name="name" placeholder="Your Name" required>
@@ -253,10 +253,24 @@ footer {
     <input type="hidden" name="_next" value="https://ajithenterprises.com">
     </form>
 </section>
+    
 
 <footer>
     <p>© 2026 Ajith Enterprises</p>
 </footer>
+<script>
+function startAction() {
+    // Scroll to contact
+    document.getElementById("contact").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    // WhatsApp
+    setTimeout(function() {
+        window.open("https://wa.me/919999999999", "_blank");
+    }, 1000);
+}
+</script>
 
 </body>
 </html>
