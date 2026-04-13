@@ -84,7 +84,7 @@ nav ul li a:hover {
     height: 100%;
     background-size: cover;
     background-position: center;
-    animation: fadeSlide 15s infinite;
+    animation: fadeSlide 1000000s infinite;
 }
 
 /* OVERLAY */
@@ -125,13 +125,8 @@ nav ul li a:hover {
 
 /* SLIDES */
 @keyframes fadeSlide {
-    0%   { background-image: url('img1.jpg'); opacity: 1; }
-    30%  { opacity: 1; }
-    33%  { background-image: url('img2.jpg'); opacity: 0; }
-    63%  { opacity: 1; }
-    66%  { background-image: url('img3.jpg'); opacity: 0; }
-    96%  { opacity: 1; }
-    100% { background-image: url('img1.jpg'); }
+    0%   { background-image: url('img1.jpeg'); opacity: 1; }
+
 }
 
 /* SECTIONS */
@@ -179,10 +174,35 @@ footer {
         font-size: 2rem;
     }
 }
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #38bdf8;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #38bdf8; /* nice blue on hover */
+}
 </style>
 </head>
 
+
 <body>
+
+
 
 <!-- NAVBAR -->
 <nav>
@@ -206,7 +226,7 @@ footer {
     <div class="hero-content">
         <h1>Precision Tools & Industrial Solutions</h1>
         <p>Delivering high-quality moulds, tools & parts with innovation and excellence</p>
-        <button class="btn" onclick="startAction()">Get in Touch</button>
+        <button class="btn" onclick="startAction()">Get Started</button>
     </div>
 </section>
 
@@ -236,7 +256,7 @@ footer {
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
+<section class="section" id = 'contact'>
     <form action="https://formsubmit.co/kiniaryan11@gmail.com" method="POST">
     
     <input type="text" name="name" placeholder="Your Name" required>
@@ -250,25 +270,20 @@ footer {
     <!-- Optional settings -->
     <input type="hidden" name="_subject" value="New Inquiry from Website">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://www.ajithenterprises.com">
     </form>
 </section>
-    
 
 <footer>
-    <p>© 2026 Ajith Enterprises</p>
+    <p>© 2026 Ajith Enterprises
+        
+    </p>
 </footer>
 <script>
 function startAction() {
-    // Scroll to contact
-    document.getElementById("contact").scrollIntoView({
-        behavior: "smooth"
-    });
+    // Scroll to contact section
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 
-
-    }, 1000);
 }
 </script>
-
 </body>
 </html>
