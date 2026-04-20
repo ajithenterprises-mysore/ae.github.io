@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Ajith Enterprises</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b1220;color:#fff}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background:rgba(10,15,30,.85);backdrop-filter:blur(10px);position:fixed;width:100%;z-index:1000}
+.logo{display:flex;align-items:center;gap:10px;color:#38bdf8;font-weight:700}
+.logo img{height:42px}
+nav ul{display:flex;list-style:none}
+nav ul li{margin-left:25px}
+nav ul li a{color:#fff;text-decoration:none;transition:.3s}
+nav ul li a:hover{color:#38bdf8}
+
+.header{padding-top:120px;text-align:center}
+.header h1{font-size:2.5rem}
+.header p{color:#94a3b8;margin-top:10px}
+
+.gallery{padding:60px 8%;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+.item{position:relative;border-radius:15px;overflow:hidden;cursor:pointer}
+.item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.item:hover img{transform:scale(1.1)}
+
+.overlay{position:absolute;bottom:0;width:100%;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:15px;opacity:0;transition:.3s}
+.item:hover .overlay{opacity:1}
+
+footer{background:#020617;text-align:center;padding:25px;color:#94a3b8}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);display:none;justify-content:center;align-items:center;z-index:2000}
+.lightbox img{max-width:90%;max-height:80%;border-radius:10px}
+.lightbox:target{display:flex}
+
+.close{position:absolute;top:30px;right:40px;font-size:30px;color:#fff;text-decoration:none}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+<img src="logo.png" alt="logo">
+<span>Ajith Enterprises</span>
+</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="header">
+<h1>Our Work Gallery</h1>
+<p>Explore our precision engineering and manufacturing projects</p>
+</div>
+
+<section class="gallery">
+
+<a href="#img1" class="item">
+<img src="img1.jpeg" alt="work">
+<div class="overlay">Mould Design</div>
+</a>
+
+<a href="#img2" class="item">
+<img src="img2.jpeg" alt="work">
+<div class="overlay">Industrial Tool</div>
+</a>
+
+<a href="#img3" class="item">
+<img src="img3.jpeg" alt="work">
+<div class="overlay">Custom Part</div>
+</a>
+
+<a href="#img4" class="item">
+<img src="img4.jpeg" alt="work">
+<div class="overlay">Manufacturing</div>
+</a>
+
+<a href="#img5" class="item">
+<img src="img5.jpeg" alt="work">
+<div class="overlay">Precision Work</div>
+</a>
+
+<a href="#img6" class="item">
+<img src="img6.jpeg" alt="work">
+<div class="overlay">Assembly</div>
+</a>
+
+</section>
+
+<!-- LIGHTBOXES -->
+<div id="img1" class="lightbox"><a href="#" class="close">×</a><img src="img1.jpeg"></div>
+<div id="img2" class="lightbox"><a href="#" class="close">×</a><img src="img2.jpeg"></div>
+<div id="img3" class="lightbox"><a href="#" class="close">×</a><img src="img3.jpeg"></div>
+<div id="img4" class="lightbox"><a href="#" class="close">×</a><img src="img4.jpeg"></div>
+<div id="img5" class="lightbox"><a href="#" class="close">×</a><img src="img5.jpeg"></div>
+<div id="img6" class="lightbox"><a href="#" class="close">×</a><img src="img6.jpeg"></div>
+
+<footer>
+<p>© 2026 Ajith Enterprises | Engineering Excellence</p>
+</footer>
+
+</body>
+</html>
